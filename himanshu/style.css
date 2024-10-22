@@ -1,0 +1,890 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+#header {
+    width: 100%;
+    height: 100vh; /* Full height */
+    background-image: url(images/cat.png);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px; /* Adjusted for the fixed navbar */
+}
+
+.container {
+    padding: 10px 10%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    background: rgba(8, 8, 8, 0.8); /* Semi-transparent background */
+    z-index: 1000; /* Keep it on top */
+    padding: 3px 5%; /* Reduced padding for a smaller nav */
+}
+
+.logo {
+    width: 100px; /* Further reduced logo size */
+}
+
+nav ul {
+    display: flex; /* Use flex for a horizontal layout */
+    align-items: center; /* Center vertically */
+}
+
+nav ul li {
+    list-style: none;
+    margin: 0 10px; /* Further adjusted margin for spacing */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Reduced font size for a smaller look */
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 2px; /* Reduced height of underline */
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -4px; /* Adjusted position */
+    transition: 0.5s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.header-text {
+    margin-top: 20%; /* Adjust if needed */
+    font-size: 30px;
+    min-width: 600px;
+}
+
+.header-text h1 {
+    font-size: 60px;
+    margin-top: 20px;
+}
+
+.header-text h1 span {
+    color: #ff004f;
+}
+
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .header-text {
+        font-size: 20px;
+        min-width: auto;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    nav ul li {
+        margin: 0 3px; /* Adjust margin for mobile */
+    }
+
+    nav {
+        padding: 3px 5%; /* Keep the same padding on mobile */
+    }
+}
+
+
+
+.hire-button {
+    background-color: #ff004f; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hire-button:hover {
+    background-color: #e60045; /* Darker shade on hover */
+}
+
+
+
+/*------------------about----------------------*/
+#about{
+    padding: 80px 0;
+    color: #ababab;
+
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-col-1{
+    flex-basis: 35%;
+
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%;
+}
+.sub-title{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px;
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+.tab-links.active-link::after{
+    width: 50%;
+}
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+.tab-contents{
+    display: none;
+}
+.tab-contents.active-tab{
+    display: block;
+}
+
+
+
+
+
+/*-------------services */
+#recommendations {
+    background-color: #262626; /* Matching the services section background */
+    padding: 60px 0;
+    text-align: center;
+    color: #fff; /* Ensuring text remains visible on dark background */
+}
+
+#recommendations .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.sub-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff; /* White text for the title */
+    text-transform: uppercase;
+}
+
+.subtitle-text {
+    font-size: 1rem;
+    color: #ccc; /* Lighter text color for subtitle */
+    margin-bottom: 50px;
+}
+
+.recommendation-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.recommendation-card {
+    background-color: #333; /* Darker card background */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Slight shadow for depth */
+    flex: 0 0 300px;
+    text-align: left;
+}
+
+.recommendation-card .stars {
+    font-size: 1.2rem;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.recommendation-card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    color: #fff; /* White text */
+}
+
+.recommendation-card p {
+    font-size: 0.9rem;
+    color: #ccc; /* Lighter text */
+    margin-bottom: 30px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.user-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.user-info p {
+    font-size: 0.9rem;
+    color: #bbb;
+}
+
+/* Carousel dots */
+.recommendation-carousel {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    gap: 20px;
+    padding-bottom: 10px; /* Some padding to prevent content cut-off */
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+
+.recommendation-carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Edge */
+}
+
+/* Optional smooth scrolling effect */
+.recommendation-carousel {
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+
+
+/* -------------port--------------------------- */
+
+#portfolio{
+    padding: 50px 0;
+
+}
+
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(250px , 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px; 
+    transition: height 0.5s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: #ff004f;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+    transform:scale(1.1) ;
+
+}
+.work:hover .layer{
+    height: 100%;
+}
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff004f;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transform: background 0.5s;
+}
+.btn:hover{
+    background: #ff004f;
+}
+
+
+
+/*----------------------------------*/
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #aa191f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    color: #ff004f;
+    transform: translateY(-5px);
+}
+.btn.btn2{
+    display: inline-block;
+    background: #ff004f;
+}
+.contact-right form{
+    width: 100%;
+}
+form input,form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #080808;
+    color: #fff;
+}
+
+.skills {
+    padding: 50px 0;
+    background: #1e1e1e; /* Background color for the skills section */
+    display: flex; /* Use flexbox to align items */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+}
+
+.section-title {
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.skills__container {
+    display: flex;
+    flex-direction: column; /* Stack items in a column */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Add some space between items */
+}
+
+.skills__subtitle {
+    color: #ff004f;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.skills__text {
+    color: #ababab;
+    margin-bottom: 30px;
+    text-align: center; /* Center the text */
+}
+
+.skills__data {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; /* Allow full width for skill data */
+    max-width: 600px; /* Limit max width */
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.skills__icon {
+    font-size: 30px;
+    color: #ff004f; /* Icon color */
+    margin-right: 10px;
+}
+
+.skills__name {
+    color: #fff;
+    font-size: 20px;
+}
+
+.skills_bar {
+    height: 8px;
+    background: #262626; /* Background for the skill bars */
+    border-radius: 5px;
+    flex: 1;
+    margin: 0 10px;
+    overflow: hidden;
+}
+
+.skills_bar::after {
+    content: '';
+    display: block;
+    height: 100%;
+    background: #ff004f; /* Fill color for the skill bars */
+    width: 0; /* Initially set to 0 for animation */
+    transition: width 1s ease-in-out; /* Animation for filling the bar */
+}
+
+/* Set width for each skill bar based on percentage */
+.skills_bar.skills_html::after {
+    width: 95%; /* Set width for HTML5 skill */
+}
+
+.skills_bar.skills_css::after {
+    width: 85%; /* Set width for CSS3 skill */
+}
+
+.skills_bar.skills_js::after {
+    width: 65%; /* Set width for JavaScript skill */
+}
+
+.skills_bar.skills_ux::after {
+    width: 85%; /* Set width for UX/UI skill */
+}
+
+.skills__percentage {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* Skills hover effect */
+.skills__data:hover .skills_bar::after {
+    width: 100%; /* Fill the bar on hover */
+}
+
+
+
+
+
+/* Add Skill Form */
+.add-skill {
+    margin-top: 30px;
+}
+
+.add-skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.add-skill form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.add-skill form input {
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    width: 180px;
+}
+
+.add-skill-btn {
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Skills Container Styling */
+.skills__container {
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    align-items: center;
+    gap: 20px; /* Adds spacing between skill items */
+    max-width: 600px; /* Set max width for the skills container */
+    margin: 0 auto; /* Center the skills container */
+}
+
+/* Skill Item Styling */
+.skills__data {
+    display: flex;
+    justify-content: space-between; /* Ensures alignment between the skill name and percentage */
+    align-items: center;
+    width: 100%; /* Ensures each skill takes up full container width */
+}
+
+.skills__names {
+    display: flex;
+    align-items: center;
+}
+
+.skills__icon {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.skills_bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.skills__percentage {
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+
+
+
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+
+
+
+
+
+.add-skill {
+    margin-top: 30px;
+    border: 2px solid #ff004f; /* Change the color and thickness as needed */
+    padding: 20px; /* Add some padding */
+    border-radius: 5px; /* Optional: add rounded corners */
+}
+
+
+.add-skill h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center; /* Center the text */
+}
+
+.landing {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.logo_html {
+    margin-left: 1%;
+    height: 600px;
+    mix-blend-mode:lighten;
+    border-radius: 4%;
+}
+
+.header-text {
+    margin-top: 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------css for  mobile--------------------------------*/
+/* Additional styles for very small screens */
+
+
+
+@media only screen and (max-width: 600px) {
+    .header-text h1 {
+        font-size: 24px; /* Further reduce font size for smaller screens */
+    }
+
+    .header-text {
+        font-size: 18px; /* Further reduce overall font size */
+    }
+
+    .hire-button {
+        padding: 6px 12px; /* Further reduce button padding */
+    }
+}
+
+.hire-button {
+    background-color: #ff004f; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 20px; /* Vertical and horizontal padding */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    margin-top: 20px; /* Space above the button */
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.hire-button:hover {
+    background-color: #e60045; /* Darker shade on hover */
+}
+
+
+
+
+
+
+
+
+
+
+/*--------------------FOOTER------------------------*/
+#footer {
+    background-color: #333;
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+}
+
+#footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.footer-column h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #00aced;
+}
+
+.footer-column p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.social-icons a {
+    color: #fff;
+    margin-right: 15px;
+    font-size: 22px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00aced;
+}
+
+.back-to-top {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.back-to-top a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.back-to-top a:hover {
+    color: #00aced;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    color: #ccc;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+input[type="email"] {
+    padding: 10px;
+    width: 80%;
+    border: none;
+    margin-right: 10px;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+}
+
+button.btn2 {
+    padding: 10px 20px;
+    border: none;
+    background-color: #00aced;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn2:hover {
+    background-color: #0087ba;
+} 

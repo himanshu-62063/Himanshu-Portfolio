@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/dea58a72ca.js" crossorigin="anonymous"></script>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo_transparent.png" class="logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#recommendations">Recommendation</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="landing">
+                <div class="header-text">
+                    <h1>I'm <span>Himanshu Kumar</span></h1>
+                    <h1>Front-end Developer</h1>
+                    <button class="hire-button">Hire Me</button> <!-- Added button -->
+                </div>
+                <div><img class="logo_html" src="images/rou.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+
+<!------------------about-------------------->
+
+<div id="about">
+    <div class="container">
+        <div class="row">
+         <div class="about-col-1">
+            <img src="images/1112.jpg">
+         </div>
+         <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <p style="text-align: justify;">I’m a passionate full-stack developer with a strong foundation in JavaScript and experience building scalable web applications using technologies like HTML, CSS, React, and the MERN stack. My expertise spans frontend development, API integrations, and backend systems, with a focus on delivering user-friendly and efficient solutions.
+
+                I've worked on several innovative projects, including Soulheal, a healthcare platform aimed at reducing stress through personalized therapies, Swasthify, an online doctor appointment system that enhances patient-doctor interactions, and Prescripto, where I implemented secure API integrations like Stripe. Additionally, during my internship at Yashra.in, I contributed to a company comparison website by engineering FastAPI endpoints and streamlining backend data management.</p>
+            <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    
+                    <li><span>Front-End Developer</span><br>Designing Fronted Of Website</li>
+                    <li><span>Back_End Developer</span><br>Designing Backend Of Website</li>
+                    <li><span>DSA</span><br>Problem Solving</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+                <ul>
+                    <li><span>Yashra.in</span><br>Web Developer Intern</li>
+                    <li><span>Intern PE</span><br>Web Developer Intern</li>
+                    
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>2019</span><br>High School From Mahesh Academy</li>
+                    <li><span>2021</span><br>Intermediate From D.A.V Public School</li>
+                    <li><span>2021-2025</span><br>B.Tech From G.L Bajaj </li>
+                </ul>
+            </div>
+         </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<!--===== SKILLS =====-->
+<section class="skills section" id="skills">
+    <h2 class="skills__subtitle">Skills</h2>
+
+    <div class="skills__container bd-grid">          
+        <div>
+            <!-- <h2 class="skills__subtitle">Profesional Skills</h2> -->
+            <p class="skills__text">I possess a diverse range of skills that are essential for web development and design. My expertise includes:</p>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-html5 skills__icon'></i>
+                    <span class="skills__name">HTML5</span>
+                </div>
+                <div class="skills_bar skills_html">
+
+                </div>
+                <div>
+                    <span class="skills__percentage">95%</span>
+                </div>
+            </div>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-css3 skills__icon'></i>
+                    <span class="skills__name">CSS3</span>
+                </div>
+                <div class="skills_bar skills_css">
+                    
+                </div>
+                <div>
+                    <span class="skills__percentage">85%</span>
+                </div>
+            </div>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxl-javascript skills__icon' ></i>
+                    <span class="skills__name">JAVASCRIPT</span>
+                </div>
+                <div class="skills_bar skills_js">
+                    
+                </div>
+                <div>
+                    <span class="skills__percentage">65%</span>
+                </div>
+            </div>
+            <div class="skills__data">
+                <div class="skills__names">
+                    <i class='bx bxs-paint skills__icon'></i>
+                    <span class="skills__name">UX/UI</span>
+                </div>
+                <div class="skills_bar skills_ux">
+                    
+                </div>
+                <div>
+                    <span class="skills__percentage">85%</span>
+                </div>
+            </div>
+        </div>
+        
+        <div>              
+            <img src="assets/img/work3.jpg" alt="" class="skills__img">
+        </div>
+    </div>
+</section>
+
+
+
+
+            <!-- New Skill Form -->
+            <div class="add-skill">
+                <h3>Add a New Skill</h3>
+                <form id="addSkillForm">
+                    <input type="text" id="newSkillName" placeholder="Skill Name" required>
+                    <input type="number" id="newSkillPercentage" placeholder="Percentage" min="1" max="100" required>
+                    <button type="submit" class="add-skill-btn">Add Skill</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-----------------------srrvices ---------------------------------------------->
+<!------------------- Recommendations Section --------------------->
+<div id="recommendations">
+    <div class="container">
+        <h1 class="sub-title">Recommendations</h1>
+        <p class="subtitle-text">See what clients and collaborators have to say about working with me. Their feedback reflects my commitment to quality and innovation.</p>
+        
+        <div class="recommendation-carousel">
+            <!-- Recommendation Card 1 -->
+            <div class="recommendation-card">
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <h2>Great Quality!</h2>
+                <p>Working with Himanshu was a pleasure. The front-end design exceeded my expectations, delivering a sleek and responsive interface that users love....</p>
+                <div class="user-info">
+                    <img src="images/1.jpg" alt="James Gouse" class="user-photo">
+                    <div>
+                        <h3>James Gouse</h3>
+                        <p>Graphic Designer</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recommendation Card 2 -->
+            <div class="recommendation-card">
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <h2>Amazing Work!</h2>
+                <p>Himanshu’s problem-solving skills were key to the success of our project. He quickly addressed complex challenges and delivered reliable back-end solutions....</p>
+                <div class="user-info">
+                    <img src="images/2.jpg" alt="Tiana Philips" class="user-photo">
+                    <div>
+                        <h3>Tiana Philips</h3>
+                        <p>Photographer</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recommendation Card 3 -->
+            <div class="recommendation-card">
+                <div class="stars">
+                    ★★★★★
+                </div>
+                <h2>Great Quality!</h2>
+                <p>I’m impressed with the level of detail and professionalism Himanshu brought to our project. His work improved the site’s performance and user engagement significantly.</p>
+                <div class="user-info">
+                    <img src="images/3.jpg" alt="Talan Westervelt" class="user-photo">
+                    <div>
+                        <h3>Talan Westervelt</h3>
+                        <p>Business Man</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pagination dots (optional) -->
+        <div class="carousel-dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+</div>
+
+
+<!---------------------portiflio------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/work-1.png">
+                <div class="layer">
+                    <h3>Soul Heal- Stress Relief Website</h3>
+                    <p style="text-align: justify;">Soulheal is a healthcare website designed to help users manage stress through various therapies and tools. It offers audio therapy (music and podcasts via Spotify), video therapy, child therapy, reading therapy (motivational books via Amazon), laughing therapy, yoga therapy, and spiritual therapy. Additionally, it features a chatbot for personalized therapy and a consult a doctor option, all aimed at improving mental well-being.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-2.png">
+                <div class="layer">
+                    <h3>Prescripto</h3>
+                    <p style="text-align: justify;">Prescripto is an online doctor appointment platform that simplifies booking and managing medical consultations. It features secure user registration, appointment booking, payment integration, an admin panel, doctor ratings, and upcoming AI-powered doctor recommendations based on specific medical needs.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/work-3.png">
+                <div class="layer">
+                    <h3>one district one product</h3>
+                    <p style="text-align: justify;">One District One Product (ODOP) is an initiative by the Indian government to promote and support the production of unique products or crafts that are specific to each district. The goal is to boost the local economy, create employment opportunities, and preserve traditional crafts by developing these products on a larger scale. Each district identifies a product or craft with a strong local identity, and the government provides support for marketing, branding, and export, helping local artisans and manufacturers reach a wider market.</p>
+                    <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+
+</div>
+
+<!-----------------------contact---------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> contact@example.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i> 0123456789</p>
+                <div class="social-icons">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+                </div>
+                <a href="images/resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form id="contactForm">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <!-- About Section -->
+            <div class="footer-column">
+                <h3>About Me</h3>
+                <p>Hi, I'm Himanshu Kumar, a web developer passionate about creating elegant and functional web solutions. Let's work together to bring your ideas to life.</p>
+                <img src="images/logo.png" alt="Logo" style="width: 100px; margin-top: 10px;">
+            </div>
+
+            <!-- Quick Links Section -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#recommendations">Recommendations</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Portfolio Section -->
+            <div class="footer-column">
+                <h3>Portfolio</h3>
+                <ul>
+                    <li><a href="#projects">My Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter Signup Section -->
+            <div class="footer-column">
+                <h3>Subscribe</h3>
+                <p>Get the latest updates, projects, and blog posts directly in your inbox.</p>
+                <form id="newsletterForm">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit" class="btn btn2">Hire Me</button>
+                </form>
+            </div>
+
+            <!-- Connect Section -->
+            <div class="footer-column">
+                <h3>Connect</h3>
+                <div class="social-icons">
+                    <a href="https://linkedin.com"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://twitter.com"><i class="fa-brands fa-square-x-twitter"></i></a>
+                    <a href="https://github.com"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://medium.com"><i class="fa-brands fa-medium"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top">
+            <a href="#home"><i class="fa-solid fa-arrow-up"></i> Back to Top</a>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="footer-bottom">
+            <p>Copyright © 2024 Himanshu Kumar. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+<script>
+
+
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent the default form submission
+        alert("Your message has been sent successfully!");
+        // Optionally, you can reset the form after submission
+        this.reset();
+    });
+    
+
+
+
+
+
+
+
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+
+
+
+
+
+// Function to load skills from Local Storage on page load
+window.onload = function() {
+    let savedSkills = JSON.parse(localStorage.getItem('skills')) || [];
+    savedSkills.forEach(skill => {
+        addSkillToDOM(skill.name, skill.percentage);
+    });
+};
+
+// Event listener to add new skill and store it
+document.getElementById('addSkillForm').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    // Get the values from the input fields
+    const skillName = document.getElementById('newSkillName').value;
+    const skillPercentage = document.getElementById('newSkillPercentage').value;
+
+    // Add the skill to the DOM
+    addSkillToDOM(skillName, skillPercentage);
+
+    // Save the new skill to Local Storage
+    let savedSkills = JSON.parse(localStorage.getItem('skills')) || [];
+    savedSkills.push({ name: skillName, percentage: skillPercentage });
+    localStorage.setItem('skills', JSON.stringify(savedSkills));
+
+    // Clear form inputs
+    document.getElementById('newSkillName').value = '';
+    document.getElementById('newSkillPercentage').value = '';
+});
+
+// Function to add the skill to the DOM
+function addSkillToDOM(skillName, skillPercentage) {
+    // Create new elements for the new skill
+    const skillContainer = document.createElement('div');
+    skillContainer.classList.add('skills__data');
+
+    // Skill Name & Icon Container
+    const skillNames = document.createElement('div');
+    skillNames.classList.add('skills__names');
+    
+    // Adding Icon (Default generic icon for new skills)
+    const skillIcon = document.createElement('i');
+    skillIcon.classList.add('bx', 'bx-cube-alt', 'skills__icon'); // You can change the icon as needed
+    skillNames.appendChild(skillIcon);
+    
+    // Adding Skill Name
+    const skillText = document.createElement('span');
+    skillText.classList.add('skills__name');
+    skillText.textContent = skillName;
+    skillNames.appendChild(skillText);
+    
+    // Progress Bar Container
+    const progressBar = document.createElement('div');
+    progressBar.classList.add('skills_bar');
+    progressBar.style.position = 'relative';
+    
+    // Progress Bar Level
+    const progressLevel = document.createElement('div');
+    progressLevel.style.width = skillPercentage + '%';
+    progressLevel.style.backgroundColor = '#ffcc00';
+    progressLevel.style.height = '100%';
+    progressLevel.style.borderRadius = '5px';
+    progressLevel.style.position = 'absolute';
+    progressBar.appendChild(progressLevel);
+
+    // Skill Percentage Display
+    const skillPercent = document.createElement('div');
+    const percentText = document.createElement('span');
+    percentText.classList.add('skills__percentage');
+    percentText.textContent = skillPercentage + '%';
+    skillPercent.appendChild(percentText);
+
+    // Create Delete Button
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Delete';
+    deleteButton.style.marginLeft = '10px'; // Add some space between percentage and delete button
+    deleteButton.classList.add('delete-btn');
+    deleteButton.onclick = function() {
+        // Remove the skill from the DOM
+        skillContainer.remove();
+
+        // Remove the skill from Local Storage
+        let savedSkills = JSON.parse(localStorage.getItem('skills')) || [];
+        savedSkills = savedSkills.filter(skill => skill.name !== skillName);
+        localStorage.setItem('skills', JSON.stringify(savedSkills));
+    };
+    
+    // Append delete button to the skill container
+    skillContainer.appendChild(deleteButton);
+
+    // Append new skill components
+    skillContainer.appendChild(skillNames);
+    skillContainer.appendChild(progressBar);
+    skillContainer.appendChild(skillPercent);
+
+    // Append the new skill container to the skills section
+    const skillsContainer = document.querySelector('.skills__container');
+    skillsContainer.appendChild(skillContainer);
+}
+
+    
+
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
